@@ -17,22 +17,19 @@ const popularData = [
         {
             id: '2',
             name: 'ham',
-            image: require('../images/ham.png')
+            image: require('../images/tomato.png')
         },
         {
             id: '3',
             name: 'ham',
-            image: require('../images/ham.png')
+            image: require('../images/garlic.png')
         },
         {
             id: '4',
             name: 'ham',
-            image: require('../images/ham.png')
+            image: require('../images/cheese.png')
         }]
         ,
-
-
-
     },
     {
         id: "2",
@@ -40,6 +37,10 @@ const popularData = [
         title: 'Vegatarian Pizza',
         weight: '480 gr',
         raiting: '4.7',
+        price: 4.79,
+        size: 'Medium 18"',
+        crust: 'Thin Crust',
+        delivery: 40,
         ingridients: [{
             id: '1',
             name: 'ham',
@@ -53,12 +54,12 @@ const popularData = [
         {
             id: '3',
             name: 'ham',
-            image: require('../images/ham.png')
+            image: require('../images/garlic.png')
         },
         {
             id: '4',
             name: 'ham',
-            image: require('../images/ham.png')
+            image: require('../images/tomato.png')
         }]
     },
     {
@@ -67,6 +68,10 @@ const popularData = [
         title: 'Pepperoni Pizza',
         weight: '740 gr',
         raiting: '4.6',
+        price: 2.89,
+        size: 'Small 10"',
+        crust: 'Thin Crust',
+        delivery: 20,
         ingridients: [{
             id: '1',
             name: 'ham',
@@ -80,12 +85,12 @@ const popularData = [
         {
             id: '3',
             name: 'ham',
-            image: require('../images/ham.png')
+            image: require('../images/tomato.png')
         },
         {
             id: '4',
             name: 'ham',
-            image: require('../images/ham.png')
+            image: require('../images/cheese.png')
         }]
     }
 ];

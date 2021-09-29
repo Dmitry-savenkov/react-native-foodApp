@@ -77,7 +77,6 @@ export default Home = ({ navigation }) => {
                             keyExtractor={item => item.id}
                             horizontal={true}
                         />
-
                     </View>
                 </View>
                 {/* Popular */}
