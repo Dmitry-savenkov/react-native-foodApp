@@ -6,16 +6,10 @@ import colors from './assets/colors/color';
 import Icon from 'react-native-vector-icons/Ionicons';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Home from './components/Home';
+import Details from './components/Details';
 Icon.loadFont();
 const Stack = createNativeStackNavigator();
 
-function DetailsScreen() {
-  return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>Details Screen</Text>
-    </View>
-  );
-}
 export default function App() {
 
   return (
@@ -26,7 +20,10 @@ export default function App() {
         <Stack.Screen name="Home" component={Home} options={
           { headerShown: false }
         } />
-        <Stack.Screen name="Details" component={DetailsScreen} />
+        <Stack.Screen name="Details" component={Details} options={
+          { headerShown: false }
+        } />
+
 
       </Stack.Navigator>
 

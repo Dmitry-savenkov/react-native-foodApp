@@ -7,7 +7,7 @@ import categoriesData from '../assets/data/categoriesData';
 import popularData from '../assets/data/popularData';
 import colors from '../assets/colors/color';
 Feather.loadFont()
-export default Home = () => {
+export default Home = ({ navigation }) => {
 
     const renderCategoryItem = ({ item }) => {
         {/* Categories */ }
@@ -85,36 +85,45 @@ export default Home = () => {
                     <Text style={styles.popularTitle}>
                         Popular
                     </Text>
-                    {popularData.map(item => (
-                        <View style={styles.popularPizza}>
-                            <View>
+                    {popularData.map((item) => (
+                        <TouchableOpacity
+                            activeOpacity='0.7'
+                            key={item.id}
+                            onPress={() => {
+                                navigation.navigate('Details', {
+                                    item: item,
+                                })
+                            }}>
+                            <View style={styles.popularPizza}>
                                 <View>
-                                    <View style={styles.popuparTopWrapper}>
-                                        <MaterialCommunityIcons name='crown' size={18} color={colors.primary} />
-                                        <Text style={styles.popularTopTitle}>Top of the Week</Text>
-                                    </View>
                                     <View>
-                                        <Text style={styles.popuparTextName}>{item.title}</Text>
-                                        <Text style={styles.popuparTextWeight}>Weight {item.weight}</Text>
-                                    </View>
-                                </View>
-                                <View style={styles.popularCardButton}>
-                                    <TouchableOpacity activeOpacity='0.7'>
-                                        <View style={styles.pizzaButton}>
-                                            <Feather name='plus' size={13} colors={colors.text} />
+                                        <View style={styles.popuparTopWrapper}>
+                                            <MaterialCommunityIcons name='crown' size={18} color={colors.primary} />
+                                            <Text style={styles.popularTopTitle}>Top of the Week</Text>
                                         </View>
-                                    </TouchableOpacity>
+                                        <View>
+                                            <Text style={styles.popuparTextName}>{item.title}</Text>
+                                            <Text style={styles.popuparTextWeight}>Weight {item.weight}</Text>
+                                        </View>
+                                    </View>
+                                    <View style={styles.popularCardButton}>
+                                        <TouchableOpacity activeOpacity='0.7'>
+                                            <View style={styles.pizzaButton}>
+                                                <Feather name='plus' size={13} colors={colors.text} />
+                                            </View>
+                                        </TouchableOpacity>
 
-                                    <View style={styles.pizzaRaiting}>
-                                        <Feather name='star' size={13} colors={colors.primary} />
-                                        <Text style={styles.raiting}>{item.raiting}</Text>
+                                        <View style={styles.pizzaRaiting}>
+                                            <Feather name='star' size={13} colors={colors.primary} />
+                                            <Text style={styles.raiting}>{item.raiting}</Text>
+                                        </View>
                                     </View>
                                 </View>
+                                <View style={styles.popularPizzaImg}>
+                                    <Image source={item.image} style={styles.popularPizzaRight} />
+                                </View>
                             </View>
-                            <View style={styles.popularPizzaImg}>
-                                <Image source={item.image} style={styles.popularPizzaRight} />
-                            </View>
-                        </View>
+                        </TouchableOpacity>
                     ))}
                 </View>
             </View >
