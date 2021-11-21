@@ -1,5 +1,9 @@
 # react-native-foodApp
 
+first screen          |  info about pizza
+:-------------------------:|:-------------------------:
+![](screen/img1.png)  |  ![](screen/img2.png) 
+
 ### Установка и запуск Expo Dev Tools
 
 1. Установить [Node.js](https://nodejs.org/).
